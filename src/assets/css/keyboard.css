@@ -1,0 +1,108 @@
+@layer components {
+  .kbd_page,
+  .kbd_bg {
+    @apply m-0 p-0;
+  }
+
+  .kbd_bg {
+    @apply relative w-307.75 bg-gray-200;
+  }
+
+  .keyboard {
+    @apply relative w-292 h-135 pt-18.75 pl-4 m-0 z-5 bg-top list-none;
+  }
+
+  li,
+  .key {
+    @apply w-16 h-17.25 py-0 px-2 mr-3 mb-3 rounded-lg leading-17.25
+        relative float-left shadow-key
+        font-sans text-center text-2xl text-black bg-white 
+        cursor-pointer;
+    @apply active:shadow-keyPress active:top-0.5;
+  }
+
+  ol li span {
+    @apply block h-3.5 leading-10.5 text-2xl;
+  }
+
+  .desc {
+    @apply text-3.4;
+  }
+
+  .mouse {
+    @apply bg-blue-300;
+  }
+  .move {
+    @apply bg-red-300;
+  }
+
+  .special {
+    @apply h-17.25 pt-10 text-sm;
+  }
+
+  .special span {
+    @apply absolute px-3 py-0 top-0 right-0 left-0 h-auto text-2xl leading-9;
+  }
+
+  .tall {
+    @apply h-17.25;
+  }
+
+  .special .tall {
+    @apply h-17.25 pt-7;
+  }
+
+  .less-padding {
+    @apply px-2 w-16;
+  }
+
+  .less-padding span {
+    @apply px-2;
+  }
+  .r {
+    @apply text-right;
+  }
+  .l {
+    @apply text-left;
+  }
+  .delete {
+    @apply w-24;
+  }
+  .tab {
+    @apply w-24;
+  }
+  .caps-lock {
+    @apply w-28.5;
+  }
+  .enter {
+    @apply w-30;
+  }
+  .shift {
+    @apply w-38.25;
+  }
+  .shift.r {
+    @apply w-38.25;
+  }
+  .command {
+    @apply w-20;
+  }
+  .command span {
+    @apply text-lg leading-11;
+  }
+
+  .space {
+    @apply w-111;
+  }
+
+  .arrow {
+    @apply h-8 leading-3 mt-0 mr-3 mb-0.75 ml-0 text-base;
+  }
+
+  .up {
+    @apply mt-0 mx-19 mb-0.75 rounded-t-lg;
+  }
+
+  .down {
+    @apply rounded-b-lg;
+  }
+}
