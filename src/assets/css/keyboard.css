@@ -5,11 +5,11 @@
   }
 
   .kbd_bg {
-    @apply relative w-307.75 bg-gray-200;
+    @apply relative w-284 h-114 bg-gray-200 rounded-xl;
   }
 
   .keyboard {
-    @apply relative w-292 h-135 pt-18.75 pl-4 m-0 z-5 bg-top list-none;
+    @apply relative w-288 h-114 py-6 px-6 m-0 z-5 bg-top list-none;
   }
 
   li,
@@ -30,10 +30,10 @@
   }
 
   .mouse {
-    @apply bg-blue-300;
+    @apply bg-red-300;
   }
   .move {
-    @apply bg-red-300;
+    @apply bg-blue-300;
   }
 
   .special {
