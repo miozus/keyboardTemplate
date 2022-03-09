@@ -36,6 +36,13 @@
     @apply bg-blue-300;
   }
 
+  .combine {
+    @apply bg-gradient-to-b from-red-300 to-blue-300;
+  }
+  .bottomBlue {
+    @apply bg-gradient-to-b from-white via-white to-blue-300;
+  }
+  
   .special {
     @apply h-17.25 pt-10 text-sm;
   }

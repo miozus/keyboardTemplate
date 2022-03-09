@@ -1,7 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { defineComponent, ref } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
-import Portia from "./Portia.vue";
+import Keyboard from "./Keyboard.vue";
+import normal from "../data/normal.json";
+import digital from "../data/digital.json";
+import portia from "../data/portia.json";
 </script>
 
 <template>
@@ -38,11 +41,9 @@ import Portia from "./Portia.vue";
               'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
             ]"
           >
-            <Portia class="items-center" />
+            <!-- <Portia class="items-center" /> -->
+            <Keyboard :keymap="keymap" class="items-center" />
           </TabPanel>
-        </TabPanels>
-        <TabPanels class="flex mt-2 overflow-auto">
-          <Portia class="items-center" />
         </TabPanels>
       </TabGroup>
     </div>
@@ -101,11 +102,12 @@ let categories = {
   ],
 };
 
-export default {
+export default defineComponent({
   data() {
     return {
       categories,
+      keymap: digital,
     };
   },
-};
+});
 </script>

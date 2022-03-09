@@ -71,7 +71,6 @@
 <script>
 import { ref } from 'vue'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
-import Portia from './Portia.vue'
 
 export default {
   components: {

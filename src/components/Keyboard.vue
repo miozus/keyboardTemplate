@@ -1,14 +1,13 @@
 <script setup>
 import saveAs from "file-saver";
 import domtoimage from "dom-to-image";
-import portia from "../data/portia.json";
 </script>
 
-<template>
+<template >
   <div class="kbd_page">
     <div class="kbd_bg">
-      <ol class="keyboard">
-        <template v-for="keystroke in portia" :key="keystroke.id">
+      <ol class="keyboard" id="keyboard">
+        <template v-for="keystroke in keymap" :key="keystroke.id">
           <li
             @click="whoami"
             :id="keystroke.name"
@@ -32,6 +31,9 @@ export default {
       nodes: [],
     };
   },
+  props: {
+    keymap: Object
+  },
   methods: {
     whoami(obj) {
       console.log("whoami: ", obj);
@@ -51,7 +53,8 @@ export default {
         });
     },
     getPngByNode(node) {
-      domtoimage.toPng(node)
+      domtoimage
+        .toPng(node)
         .then(function (dataUrl) {
           var img = new Image();
           img.src = dataUrl;
@@ -67,16 +70,18 @@ export default {
       });
     },
     savePngByNode(node, name) {
-      domtoimage.toBlob(node)
+      domtoimage
+        .toBlob(node)
         .then(function (blob) {
-          saveAs(blob,  `_${name}.png`);
+          saveAs(blob, `_${name}.png`);
         })
         .catch(function (error) {
           console.error("oops, something went wrong!", error);
         });
     },
     savePngByClick(node) {
-      domtoimage.toBlob(node.target)
+      domtoimage
+        .toBlob(node.target)
         .then(function (blob) {
           saveAs(blob, `_${node.target.innerText}.png`);
         })
@@ -85,8 +90,7 @@ export default {
         });
     },
     savePngByOriginId(name) {
-      domtoimage.toPng(document.getElementById(name), { quality: 0.95 })
-        .then(function (dataUrl) {
+      domtoimage.toPng(document.getElementById(name), { quality: 0.95 }).then(function (dataUrl) {
           var link = document.createElement("a");
           link.download = "keyboard.png";
           link.href = dataUrl;
