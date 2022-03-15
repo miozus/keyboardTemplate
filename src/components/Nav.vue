@@ -3,6 +3,7 @@ import { defineComponent, ref } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 import Keyboard from "./Keyboard.vue";
 import normal from "../data/normal.json";
+import semicolon from "../data/semicolon.json";
 import digital from "../data/digital.json";
 import portia from "../data/portia.json";
 </script>
@@ -106,7 +107,7 @@ export default defineComponent({
   data() {
     return {
       categories,
-      keymap: digital,
+      keymap: semicolon,
     };
   },
 });

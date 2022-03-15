@@ -39,8 +39,13 @@
   .combine {
     @apply bg-gradient-to-b from-red-300 to-blue-300;
   }
+
   .bottomBlue {
     @apply bg-gradient-to-b from-white via-white to-blue-300;
+  }
+
+  .topRed {
+    @apply bg-gradient-to-b from-red-300 via-red-50 to-white;
   }
   
   .special {
