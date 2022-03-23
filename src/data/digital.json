@@ -32,7 +32,7 @@
 {"id"   : 31, "name": "S"        , "class": "desc "                     , "text" : ""      , "visible" : true , "emoji" : "S"    },
 {"id"   : 32, "name": "D"        , "class": "desc "                     , "text" : ""      , "visible" : true , "emoji" : "D"    },
 {"id"   : 33, "name": "F"        , "class": "desc "                     , "text" : ""      , "visible" : true , "emoji" : "F"    },
-{"id"   : 34, "name": "G"        , "class": "desc"                      , "text" : ""      , "visible" : true , "emoji" : "G"    },
+{"id"   : 34, "name": "G"        , "class": "desc bottomBlue"           , "text" : "G"     , "visible" : true , "emoji" : "G"    },
 {"id"   : 35, "name": "H"        , "class": "desc bottomBlue"           , "text" : ","     , "visible" : true , "emoji" : "H"   },
 {"id"   : 36, "name": "J"        , "class": "desc move"                 , "text" : "4"     , "visible" : true , "emoji" : "J"   },
 {"id"   : 37, "name": "K"        , "class": "desc move"                 , "text" : "5"     , "visible" : true , "emoji" : "K"   },

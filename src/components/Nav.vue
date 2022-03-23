@@ -107,7 +107,7 @@ export default defineComponent({
   data() {
     return {
       categories,
-      keymap: semicolon,
+      keymap: digital,
     };
   },
 });
