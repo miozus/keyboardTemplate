@@ -6,6 +6,8 @@ import normal from "../data/normal.json";
 import semicolon from "../data/semicolon.json";
 import digital from "../data/digital.json";
 import portia from "../data/portia.json";
+import debug from "../data/debug.json";
+import debugCtrl from "../data/debugCtrl.json";
 </script>
 
 <template>
@@ -107,7 +109,7 @@ export default defineComponent({
   data() {
     return {
       categories,
-      keymap: digital,
+      keymap: debugCtrl,
     };
   },
 });
