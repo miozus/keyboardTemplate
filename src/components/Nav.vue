@@ -109,7 +109,7 @@ export default defineComponent({
   data() {
     return {
       categories,
-      keymap: debugCtrl,
+      keymap: debug,
     };
   },
 });
