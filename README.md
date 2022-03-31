@@ -1,12 +1,13 @@
 # Keyboard Template
 
+>
 > Render keyboard for keymap designer
 >
 > supports 60 keystrokes | Winodws | MacOS
 >
 > <img src="https://img.shields.io/badge/Vue-3.2.16-orange?logo=vue.js"> <img src="https://img.shields.io/badge/Tailwindcss-2.2.19-orange?logo=Tailwind CSS"> <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen?logo=Macy’s">
 
-### Install & Run
+## Install & Run
 
 ```bash
 git clone https://github.com/miozus/keyboardTemplate
@@ -17,10 +18,15 @@ npm install
 npm run dev
 ```
 
-### Usage
+```bash
+# open chrome
+http://localhost:3000/
+```
+
+## Usage
 
 ```bash
-❯ tree -L 3 -I 'node_modules'
+❯ tree -L 4 -I 'node_modules'
 .
 ├── README.md
 ├── index.html
@@ -31,14 +37,19 @@ npm run dev
 │   ├── App.vue
 │   ├── assets
 │   │   ├── css
+│   │   │   ├── keyboard.css
+│   │   │   └── tailwind.css <- 3️⃣ global keystroke css style (optional)
 │   │   └── fonts
 │   ├── components
-│   │   ├── Keyboard.vue    <- 4️⃣ render and download controller (if nessassary)
-│   │   ├── Nav.vue         <- 1️⃣ import your keyboard data (copy normal.json then change)
+│   │   ├── Keyboard.vue     <- 4️⃣ render and download controller (optional)
+│   │   ├── Nav.vue          <- 1️⃣ import keyboard json (copy data/normal.json then change)
 │   │   └── Tabs.vue
-│   ├── data                <- 2️⃣ custom your keyboard as json 
+│   ├── data                 <- 2️⃣ custom keyboard as json 
+│   │   ├── normal.json
+│   │   ├── portia.json
+│   │   └── semicolon.json
 │   └── main.js
-├── tailwind.config.js      <- 3️⃣ global keystroke css style (tailwind)
+├── tailwind.config.js      
 └── vite.config.js
 ```
 
@@ -62,7 +73,7 @@ export default defineComponent({
 
 2️⃣ custom
 
-An example of one keystroke in  `/data/normal.json`
+An example of one keystroke in  `/data/debug.json`
 
 ```json
 {
@@ -77,28 +88,17 @@ An example of one keystroke in  `/data/normal.json`
 
 4️⃣ render and output
 
-render like (click it and down one):
+one stroke (default: click invokes download):
 
 ![debug](docs/img/_🐞_debug.png)
 
-render all (click website left-bottom `download`):
+all (defualt: click website left-bottom `download`):
 
 ![debug-keyboard](docs/img/debug-keyboard.png)
 
-### Question Shoot
+## Question Shoot
 
 Q1: How to render correctly emoji on Chrome?
 
 - Install plugin [Chromoji - Emojis for Google Chrome](https://chrome.google.com/webstore/detail/chromoji-emojis-for-googl/negakbijaemdgbhklopmghphgaeadmpo)
-- Right click plugin and choose Configuration with `Twitter` style:
-
-```bash
-Chomoji
-Style
-
-Twitter
-Scale
-
-100%
-Emoji provided free by Emoji One
-```
+- Right click plugin and choose Configuration with `Twitter` style
