@@ -36,9 +36,9 @@ http://localhost:3000/
 ├── src
 │   ├── App.vue
 │   ├── assets
-│   │   ├── css
+│   │   ├── css              <- 3️⃣ global keystroke css style (optional)
 │   │   │   ├── keyboard.css
-│   │   │   └── tailwind.css <- 3️⃣ global keystroke css style (optional)
+│   │   │   └── tailwind.css 
 │   │   └── fonts
 │   ├── components
 │   │   ├── Keyboard.vue     <- 4️⃣ render and download controller (optional)
