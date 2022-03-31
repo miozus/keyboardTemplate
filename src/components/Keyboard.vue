@@ -9,7 +9,7 @@ import domtoimage from "dom-to-image";
       <ol class="keyboard" id="keyboard">
         <template v-for="keystroke in keymap" :key="keystroke.id">
           <li
-            @click="whoami"
+            @click="savePngByClick"
             :id="keystroke.name"
             :class="keystroke.class"
             v-if="keystroke.visible"
