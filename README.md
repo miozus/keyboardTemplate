@@ -1,7 +1,7 @@
 # Keyboard Template
 
 >
-> Render keyboard for keymap designer
+> Render & output keyboard for keymap designer
 >
 > supports 60 keystrokes | Winodws | MacOS
 >
@@ -36,9 +36,9 @@ http://localhost:3000/
 ├── src
 │   ├── App.vue
 │   ├── assets
-│   │   ├── css
+│   │   ├── css              <- 3️⃣ global keystroke css style (optional)
 │   │   │   ├── keyboard.css
-│   │   │   └── tailwind.css <- 3️⃣ global keystroke css style (optional)
+│   │   │   └── tailwind.css 
 │   │   └── fonts
 │   ├── components
 │   │   ├── Keyboard.vue     <- 4️⃣ render and download controller (optional)
